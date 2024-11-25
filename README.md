@@ -15,8 +15,8 @@ This project sets up a Scrapy spider to crawl and extract data, using Docker for
 
    Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/yourusername/yourrepository.git
-   cd yourrepository
+   git clone https://github.com/alicerommi/imdb_scrapper.git
+   cd imdb_scrapper
    ```
 
 2. **Build the Docker Image**
@@ -30,7 +30,7 @@ This project sets up a Scrapy spider to crawl and extract data, using Docker for
 
    Run the Docker container to start the Scrapy spider:
    ```bash
-   docker run -it --rm -v $(pwd)/output:/app/output scrapy-imdb
+   docker run -it scrapy-imdb
    ```
 
    This command will:
