@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  scrapy:
+    image: python:3.12
+    container_name: scrapy_container
+    working_dir: /app
+    volumes:
+      - .:/app
+      - ./output:/app/output
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["scrapy", "crawl", "imdb_top50", "-o", "output/top50_movies.json"]
